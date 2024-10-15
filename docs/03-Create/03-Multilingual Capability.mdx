@@ -1,0 +1,26 @@
+---
+id: solution-multilingual-capability
+sidebar_position: 1
+title: Multilingual Capability
+---
+
+## Overview
+To successfully enable multilingual capabilities we leveraged an LLM via watsonx.ai. The translation process consisted of four steps:
+1) User selects desired language: "English" or "Spanish"
+2) If language is "Spanish", the user's query is translated to english.
+3) Translated query is leverage for Document Search on english data corpus.
+4) Answer from Document Search is translated back to spanish source language and surface to end user.
+
+## How to Implement
+:::note
+    **Prerequisite Required:** [Document Search](/Create/solution-create-document%20search)
+:::
+
+#### **Modify watsonx Assistant actions:**
+1.	Create assistant variable to store selected language by end user.
+2.	Within the "Invoke watsonx generation API" which is configured [here](/Create/solution-create-document%20search#enable-document-search), create a watsonx.ai prompts for step 2 above.
+3. Take translated output from watsonx.ai and pass as the context to carry out the Document search with watson disocvery.
+4. Within the "Invoke watsonx generation API" which is configured [here](/Create/solution-create-document%20search#enable-document-search), create a watsonx.ai prompts for step 4 above.
+
+
+
