@@ -1,0 +1,73 @@
+---
+title: Hosted Static Site
+---
+### Embed AI Assistant in code source
+
+1. Open your Assistant instance and find the embed script tag following [these instructions](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-web-chat):
+    1. Within the Assitant Builder's sidebar, navigate to the "Integrations" section
+    2. Under the "Essential channels" section select "Open" within the "Webchat" channel
+    3. Select the appropriate environment and navigate to the "Embed" tab
+    4. Copy the provided script
+2. Create a new HTML file using an editor of your choice and create the general structure of the file as shown below.
+```
+<html>
+<head></head>
+<body>
+    <title>My Test Page</title>
+    <p>The body of my page.</p>
+    <-- Insert Script Element -->
+    </body>
+</html>
+```
+3. Add your script element as shown below and open the HTML file using a browser to confirm the watsonx assistant chat is rendering correctly. You can also simply copy the code below and add your `integrationID`, `serviceInstanceID`, and update your `region`.
+```
+<html>
+<head></head>
+<body>
+    <title>My Test Page</title>
+    <p>The body of my page.</p>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "[Insert integrationID]", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "[Insert serviceInstanceID]", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+    </body>
+</html>
+```
+:::info
+If you wish to customize the web chat with options such as adding a restart button or adjusting the size, follow these links:
+
+[Customizing size and position of web chat](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-web-chat-develop-size-position)
+
+[Advanced configuration options](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration)
+:::
+
+------------------------
+### Host Static Site 
+#### Create Cloud Object Storage (COS) Instance
+1. Go to the dedicated IBM Cloud Account "Resource" List [here](https://cloud.ibm.com/resources) and click "Create Resource +"
+2. Search and select "Object Storage"
+3. Select "IBM Cloud" as the infrastructure and the appropriate pricing plan
+4. Name the service and click "Create"
+
+#### Create a Custom COS Bucket
+1. From the "Resource" List select the newly created COS instance
+2. Click "Create a Custom Bucket"
+3. Enter a valid bucket name and select the appropriate values for "Resiliency", "Location", "Storage class", "Object Versioning" and "Immutablity"
+4. Within the section "Advanced configurations (optional)" click the "Add +" for "Static website hosting"
+    <img src="https://media.github.ibm.com/user/386696/files/4aad2214-1dac-445e-9d9d-9440ab2e18f8" alt="COS Static website" width="600"/>
+5. Ensure the "Public access" toggle is switched to "On"
+6. Enter the name of the target html file which will be used to build the desired web app
+7. Click "Save" and then click "Create bucket"
+
+#### **Upload HTML file**
+1. Upload the HTML file you created [here](#embed-ai-assistant-in-code-source)
+

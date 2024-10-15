@@ -1,0 +1,43 @@
+---
+id: Genesys Integration
+sidebar_position: 1
+title: Genesys Integration
+---
+
+## Step-by-Step Instructions
+
+### 1. Setup Genesys Web Messenger
+1. Sign up for a free trial of Genesys Cloud CX at [this link.](https://www.genesys.com/campaign/try-genesys-cloud-for-free) This trial will last for 14 days.
+2. Once Genesys Cloud CX is running, configure the web messenger following [these steps:](https://help.mypurecloud.com/articles/configure-messenger/)
+    1. Click **Admin**.
+    2. Under **Message**, click **Messenger Configurations**.
+    3. Enter a name and description for your web messenger.
+    4. In the **Appearance** tab, select **Hide** for **Set your Launcher Button Visibility** and select **Off** for the **User Interface**.
+    5. The other settings are optional for basic set up. Once you have looked over all the options, click **Save New Version**. 
+3. Once your web messenger is configured, deploy the messenger following [these steps:](https://help.mypurecloud.com/articles/deploy-messenger/)
+    1. Click **Admin**.
+    2. Under **Message**, click **Messenger Deployments**.
+    3. Click **New Deployment**.
+    4. Enter a name and description.
+    5. Set the **Status** to **Active**.
+    6. Under **Select your Configuration** click **Select Configuration** and select the verision of web messenger that you configured in the previous section.
+    7. Under **Restrict domain access** select **Allow all domains** for testing and development purposes.
+    8. Click **Save**. The **Messenger Deployments** page now displays your deployed messenger which you can click to access the deployment script which will be used in the next section to integrate with Watson Assistant.
+------------------------
+### 2. Connect Genesys to Watson Assistant
+1. Get the **script URL, environment, and deployment ID** values from the **Messenger Deployments** page on Genesys and have them ready to add to the Watson Assistant Embed Script.
+2. Follow the sample script which shows how to enable the Genesys integration at [this link.](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=service-desks-genesys#enabling)
+    1. The serviceDesk portion of the script enables the Genesys integration. Simply add those values to where you have the Watson Assistant Embed script written out.
+    
+    :::note 
+    The Genesys SDK does not work if launched from a local HTML file opened directly in your browser (using file://). It needs to be served from a server (which can be localhost) over HTTP. You can use [http-server](https://www.npmjs.com/package/http-server) if you need a simple local server for testing purposes.
+    :::
+------------------------
+### 3. Using Genesys Live Agent
+1. Log in to your Genesys trial account and toggle the **Off Queue** option in the top right to become **On Queue**.
+2. Open your Watson Assistant that has been integrated with Genesys (over HTTP not on the UI or local HTML file) and follow action to connect to live agent.
+3. Once you have clicked **Connect to Live Agent** go back to the Genesys account and you should see an incoming message which you can accept or decline. Click **Accept** and now you are able to communicate with a live customer using your Watson Assistant instance.
+
+------------------------
+## References
+- [Integrating Watson Assistant with Genesys](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-deploy-genesys)
