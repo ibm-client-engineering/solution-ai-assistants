@@ -20,7 +20,19 @@ To incorporate a disambiguation method there are two core steps:
     | Printer    | model A, model B      |
 
 2. Build watsonx Assistant actions for each topic and build a step to surface the entities as options to the user
+    
     ![](../../assets/screenshots/disam_actions.png)
 
-3. Combine the user's selected option with their document search request and present the clarified answer to them.
-    
+3. Build another step within the watsonx Assistant action to store the selected option as a variable, for example as "selected_option"
+
+    ![](../../assets/screenshots/disam_actions_step.png)
+
+4. Combine the user's "selected option" with the document search request
+
+    For example, if the variable "user_query" holds the user's original question, such as "How do I clear my browser cache?", you'll need to append the selected option to the "user_query" variable before sending the clarified query to the "Document Search" method.
+
+    Example)
+
+    ``` user_query.append(" on").append(selected_option)```
+
+    This will result in the the final query to the "Document Search" method to look like: "How do I clear my browser cache on Safari" which will then return the most appropriate answer.
