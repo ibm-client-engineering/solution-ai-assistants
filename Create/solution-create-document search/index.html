@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GB0XWXF3GE"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-GB0XWXF3GE",{anonymize_ip:!0})</script><link rel="stylesheet" href="/solution-ai-assistants/assets/css/styles.284b6b33.css">
-<script src="/solution-ai-assistants/assets/js/runtime~main.ab6895b2.js" defer="defer"></script>
+<script src="/solution-ai-assistants/assets/js/runtime~main.df3f8de4.js" defer="defer"></script>
 <script src="/solution-ai-assistants/assets/js/main.cbfa638c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
@@ -25,13 +25,25 @@
 <li>watsonx.ai</li>
 <li>watsonx Assistant</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="watsonx-discovery">watsonx Discovery<a href="#watsonx-discovery" class="hash-link" aria-label="Direct link to watsonx Discovery" title="Direct link to watsonx Discovery">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="watson-discovery">Watson Discovery<a href="#watson-discovery" class="hash-link" aria-label="Direct link to Watson Discovery" title="Direct link to Watson Discovery">​</a></h2>
 <hr>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p><strong>Prerequisite Required:</strong> Watson Discovery Instance</p></div></div>
 <ol>
-<li>Under new projects, input a detailed project name. Select the option <strong>&quot;Conversational Search&quot;</strong> then click Next.</li>
-<li>Input a collection name.</li>
-<li>Upload the file that will serve as the knowledge base. It should look like the following once you have uploaded</li>
+<li>Under new projects, input a project name (&quot;IT Helpdesk&quot; for example). Select the option <strong>&quot;Conversational Search&quot;</strong> then click Next.<!-- -->
+<ul>
+<li><img loading="lazy" src="/solution-ai-assistants/assets/images/watson-discovery-new-project-390e0dca79eb3d46f905dd161b8623ea.png" width="1824" height="942" class="img_ev3q"></li>
+</ul>
+</li>
+<li>Input a collection name.<!-- -->
+<ul>
+<li><img loading="lazy" src="/solution-ai-assistants/assets/images/watson-discovery-new-collection-74aacaccd7a9694413e3a9f5bda232fd.png" width="1908" height="988" class="img_ev3q"></li>
+</ul>
+</li>
+<li>Upload the file that will serve as the knowledge base. It should look like the following once you have uploaded. The uploaded data are being processed. It will take a couple minutes and we’ll move on to the following sections first.<!-- -->
+<ul>
+<li><img loading="lazy" src="/solution-ai-assistants/assets/images/watson-discovery-improve-customize-27ec9a8881332b7c57757bf183054abb.png" width="1948" height="1008" class="img_ev3q"></li>
+</ul>
+</li>
 </ol>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="optional-data-connectors">Optional Data Connectors<a href="#optional-data-connectors" class="hash-link" aria-label="Direct link to Optional Data Connectors" title="Direct link to Optional Data Connectors">​</a></h3>
 <p>In addition to direct upload data, in the Upload data section, select the <em>here</em> hyperlink at the end of &quot;Need to connect to a data source? Click <strong>here</strong>&quot;</p>
@@ -55,14 +67,47 @@
 <hr>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p><strong>Prerequisite Required:</strong> watsonx.ai Instance</p></div></div>
 <ul>
-<li>Navigate to the Cloud Pak for Data homescreen and then create a project:</li>
-<li><img loading="lazy" src="/solution-ai-assistants/assets/images/cp4d-create-project-9e20d04850f1e046e67693a2eda71e39.png" width="3426" height="1814" class="img_ev3q"></li>
-<li>Once on the project home screen navigate to the manage tab. Note down the project id, you&#x27;ll need this later when configuring NeuralSeek:</li>
+<li>Within IBM Cloud&#x27;s Resource List, Expand “AI/Machine Learning” and click on wa-itz-itz-xxx with Product “Watson Studio”<!-- -->
+<ul>
+<li><img loading="lazy" src="/solution-ai-assistants/assets/images/resource-list-watson-studio-cc015b2840c6bd5d523e849c1bbb8647.png" width="2752" height="904" class="img_ev3q"></li>
+</ul>
+</li>
+<li>Click “Launch in” and select “IBM watsonx” from dropdown list<!-- -->
+<ul>
+<li><img loading="lazy" src="/solution-ai-assistants/assets/images/launch-in-watsonx-6a6856a436656915bf2926ae9f3f1b67.png" width="2256" height="652" class="img_ev3q"></li>
+</ul>
+</li>
+<li>Click on the upper-left “Navigation Menu” and click “View all projects”</li>
+<li>Click “New Project”<!-- -->
+<ul>
+<li><img loading="lazy" src="/solution-ai-assistants/assets/images/wx-new-project-e086f6142ebfcd2c87f125c65dff9df2.png" width="2250" height="250" class="img_ev3q"></li>
+</ul>
+</li>
+<li>You’d see the following view. For Name, enter a relevant project name, and click “Create”<!-- -->
+<ul>
+<li><img loading="lazy" src="/solution-ai-assistants/assets/images/wx-create-a-project-795845df0beeee59c71a2c159552a051.png" width="2148" height="1122" class="img_ev3q"></li>
+</ul>
+</li>
+<li>You have created a new watsonx project! You’d see the following view.<!-- -->
+<ul>
+<li><img loading="lazy" src="/solution-ai-assistants/assets/images/wx-project-overview-4024587dca0568cc71994cd5a20b43e6.png" width="2074" height="1084" class="img_ev3q"></li>
+</ul>
+</li>
+<li>Once on the project home screen navigate to the manage tab. Note down the project id, you&#x27;ll need this later when configuring watsonx.ai in watsonx Assistant:<!-- -->
+<ul>
 <li><img loading="lazy" src="/solution-ai-assistants/assets/images/cp4d-manage-d45d3136843f03ecb5a1d74d383bfce4.png" width="3456" height="1704" class="img_ev3q"></li>
-<li>Next, associate a Watson Machine Learning Instance to your project. Navigate to the Services and Integrations tab and then click on Associate service:</li>
+</ul>
+</li>
+<li>Next, associate a Watson Machine Learning Instance to your project. Navigate to the Services and Integrations tab and then click on Associate service:<!-- -->
+<ul>
 <li><img loading="lazy" src="/solution-ai-assistants/assets/images/cp4d-associate-wml-40deb0494c5bc018e5e2366d2e0e6c65.png" width="3456" height="1708" class="img_ev3q"></li>
-<li>Finally, check the Waston Machine Learning box to associate the instance to your project:</li>
+</ul>
+</li>
+<li>Finally, check the Waston Machine Learning box to associate the instance to your project:<!-- -->
+<ul>
 <li><img loading="lazy" src="/solution-ai-assistants/assets/images/wml-195fd6208f80f3c4dd5620674b1756f8.png" width="3456" height="1816" class="img_ev3q"></li>
+</ul>
+</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="watsonx-assistant">watsonx Assistant<a href="#watsonx-assistant" class="hash-link" aria-label="Direct link to watsonx Assistant" title="Direct link to watsonx Assistant">​</a></h2>
 <hr>
@@ -116,13 +161,13 @@
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="upload-actions">Upload Actions:<a href="#upload-actions" class="hash-link" aria-label="Direct link to Upload Actions:" title="Direct link to Upload Actions:">​</a></h5>
 <ol>
 <li>On the Actions page of watsonx Assistant, click on Global Settings.</li>
-<li>On the Upload/Download tab, click the Upload button and upload the file that was given to you by your IBM instructors.</li>
+<li>On the Upload/Download tab, click the Upload button and upload <a href="https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json" target="_blank" rel="noopener noreferrer">this actions.json file</a> or the file that was given to you by your IBM instructors.</li>
 <li>Configure the &quot;Invoke watsonx generation API&quot; action<!-- -->
 <ol>
 <li>On Step 1, click &quot;Edit extension&quot; to setup watsonx.ai custom extension.
 <img loading="lazy" src="/solution-ai-assistants/assets/images/watsonx_assistant_watsonxai_action-2c0e9e3821bc0be0877d6134c9922c5d.png" width="3440" height="1388" class="img_ev3q"></li>
 <li>For the Extension options, select &quot;watsonx.ai&quot; and for the Operation options, select &quot;Generation&quot;</li>
-<li>For &quot;Parameters&quot;<!-- -->
+<li>For &quot;Parameters&quot;, configure the following to pass the these variables to the watsonx.ai custom extension properly.<!-- -->
 <ol>
 <li>set <strong>version</strong> to <code>watsonx_api_version</code> variable</li>
 <li>set <strong>input</strong> to <code>model_input</code> variable</li>
@@ -150,6 +195,6 @@
 </ol>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="final-check">Final Check<a href="#final-check" class="hash-link" aria-label="Direct link to Final Check" title="Direct link to Final Check">​</a></h3>
-<p>Once the <strong>watsonx Assistant development</strong> is fully complete, you should see the status of actions showing green checkmarks, similar to screenshot below.</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/solution-ai-assistants/Prepare/Software Requirements"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Software Requirements</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/solution-ai-assistants/Create/solution-multilingual-capability"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Multilingual Capability</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#watsonx-discovery" class="table-of-contents__link toc-highlight">watsonx Discovery</a><ul><li><a href="#optional-data-connectors" class="table-of-contents__link toc-highlight">Optional Data Connectors</a></li></ul></li><li><a href="#watsonxai-setup" class="table-of-contents__link toc-highlight">watsonx.ai Setup</a></li><li><a href="#watsonx-assistant" class="table-of-contents__link toc-highlight">watsonx Assistant</a><ul><li><a href="#create-watson-discovery-custom-extension" class="table-of-contents__link toc-highlight">Create Watson Discovery Custom Extension</a></li><li><a href="#create-watsonxai-custom-extension" class="table-of-contents__link toc-highlight">Create watsonx.ai Custom Extension</a></li><li><a href="#enable-document-search" class="table-of-contents__link toc-highlight">Enable Document search</a><ul><li><a href="#upload-actions" class="table-of-contents__link toc-highlight">Upload Actions:</a></li><li><a href="#update-session-variables" class="table-of-contents__link toc-highlight">Update session variables:</a></li></ul></li><li><a href="#final-check" class="table-of-contents__link toc-highlight">Final Check</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Explore</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.ibm.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM</a></li><li class="footer__item"><a href="https://www.ibm.com/client-engineering" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Client Engineering</a></li><li class="footer__item"><a href="https://github.com/ibm-client-engineering" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Client Engineering Solutions Hub</a></li></ul></div></div><div class="footer__bottom text--center"><div class="margin-bottom--sm"><a href="https://ibm.com" rel="noopener noreferrer" class="footerLogoLink_BH7S"><img src="https://www.ibm.com/brand/experience-guides/developer/8f4e3cc2b5d52354a6d43c8edba1e3c9/02_8-bar-reverse.svg" alt="IBM Logo" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width="200" height="150"><img src="https://www.ibm.com/brand/experience-guides/developer/8f4e3cc2b5d52354a6d43c8edba1e3c9/02_8-bar-reverse.svg" alt="IBM Logo" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width="200" height="150"></a></div></div></div></footer></div>
+<p>Once the <strong>watsonx Assistant development</strong> is fully complete, you should see the status of actions showing green checkmarks, similar to screenshot below.</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/solution-ai-assistants/Prepare/Software Requirements"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Software Requirements</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/solution-ai-assistants/Create/solution-multilingual-capability"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Multilingual Capability</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#watson-discovery" class="table-of-contents__link toc-highlight">Watson Discovery</a><ul><li><a href="#optional-data-connectors" class="table-of-contents__link toc-highlight">Optional Data Connectors</a></li></ul></li><li><a href="#watsonxai-setup" class="table-of-contents__link toc-highlight">watsonx.ai Setup</a></li><li><a href="#watsonx-assistant" class="table-of-contents__link toc-highlight">watsonx Assistant</a><ul><li><a href="#create-watson-discovery-custom-extension" class="table-of-contents__link toc-highlight">Create Watson Discovery Custom Extension</a></li><li><a href="#create-watsonxai-custom-extension" class="table-of-contents__link toc-highlight">Create watsonx.ai Custom Extension</a></li><li><a href="#enable-document-search" class="table-of-contents__link toc-highlight">Enable Document search</a><ul><li><a href="#upload-actions" class="table-of-contents__link toc-highlight">Upload Actions:</a></li><li><a href="#update-session-variables" class="table-of-contents__link toc-highlight">Update session variables:</a></li></ul></li><li><a href="#final-check" class="table-of-contents__link toc-highlight">Final Check</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Explore</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.ibm.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM</a></li><li class="footer__item"><a href="https://www.ibm.com/client-engineering" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Client Engineering</a></li><li class="footer__item"><a href="https://github.com/ibm-client-engineering" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Client Engineering Solutions Hub</a></li></ul></div></div><div class="footer__bottom text--center"><div class="margin-bottom--sm"><a href="https://ibm.com" rel="noopener noreferrer" class="footerLogoLink_BH7S"><img src="https://www.ibm.com/brand/experience-guides/developer/8f4e3cc2b5d52354a6d43c8edba1e3c9/02_8-bar-reverse.svg" alt="IBM Logo" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width="200" height="150"><img src="https://www.ibm.com/brand/experience-guides/developer/8f4e3cc2b5d52354a6d43c8edba1e3c9/02_8-bar-reverse.svg" alt="IBM Logo" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width="200" height="150"></a></div></div></div></footer></div>
 </body>
 </html>
