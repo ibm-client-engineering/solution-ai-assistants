@@ -9,15 +9,18 @@ Setting up document search requires three core components:
 2) watsonx.ai
 3) watsonx Assistant
 
-## watsonx Discovery
+## Watson Discovery
 -----
 :::note
     **Prerequisite Required:** Watson Discovery Instance
 :::
 
-1.  Under new projects, input a detailed project name. Select the option **"Conversational Search"** then click Next.
+1.  Under new projects, input a project name ("IT Helpdesk" for example). Select the option **"Conversational Search"** then click Next.
+      - ![](../../assets/screenshots/watson-discovery-new-project.png)
 2.  Input a collection name.
-3.  Upload the file that will serve as the knowledge base. It should look like the following once you have uploaded
+      - ![](../../assets/screenshots/watson-discovery-new-collection.png)
+3.  Upload the file that will serve as the knowledge base. It should look like the following once you have uploaded. The uploaded data are being processed. It will take a couple minutes and we’ll move on to the following sections first.
+      - ![](../../assets/screenshots/watson-discovery-improve-customize.png)
 
 ### Optional Data Connectors
 In addition to direct upload data, in the Upload data section, select the _here_ hyperlink at the end of "Need to connect to a data source? Click **here**"
@@ -35,14 +38,23 @@ In addition to direct upload data, in the Upload data section, select the _here_
 :::note
     **Prerequisite Required:** watsonx.ai Instance
 :::
-- Navigate to the Cloud Pak for Data homescreen and then create a project:
-- ![](../../assets/screenshots/cp4d-create-project.png)
-- Once on the project home screen navigate to the manage tab. Note down the project id, you'll need this later when configuring NeuralSeek:
-- ![](../../assets/screenshots/cp4d-manage.png)
+- Within IBM Cloud's Resource List, Expand “AI/Machine Learning” and click on wa-itz-itz-xxx with Product “Watson Studio”
+   - ![](../../assets/screenshots/resource-list-watson-studio.png)
+- Click “Launch in” and select “IBM watsonx” from dropdown list
+   - ![](../../assets/screenshots/launch-in-watsonx.png)
+- Click on the upper-left “Navigation Menu” and click “View all projects”
+- Click “New Project”
+   - ![](../../assets/screenshots/wx-new-project.png)
+- You’d see the following view. For Name, enter a relevant project name, and click “Create”
+   - ![](../../assets/screenshots/wx-create-a-project.png)
+- You have created a new watsonx project! You’d see the following view. 
+   - ![](../../assets/screenshots/wx-project-overview.png)
+- Once on the project home screen navigate to the manage tab. Note down the project id, you'll need this later when configuring watsonx.ai in watsonx Assistant:
+   - ![](../../assets/screenshots/cp4d-manage.png)
 - Next, associate a Watson Machine Learning Instance to your project. Navigate to the Services and Integrations tab and then click on Associate service:
-- ![](../../assets/screenshots/cp4d-associate-wml.png)
+   - ![](../../assets/screenshots/cp4d-associate-wml.png)
 - Finally, check the Waston Machine Learning box to associate the instance to your project:
-- ![](../../assets/screenshots//wml.png)
+   - ![](../../assets/screenshots//wml.png)
 
 
 ## watsonx Assistant
@@ -89,12 +101,12 @@ To enable the document search capability, you'll need to configure Watsonx.ai an
 
 ##### Upload Actions:
 1. On the Actions page of watsonx Assistant, click on Global Settings.
-2. On the Upload/Download tab, click the Upload button and upload the file that was given to you by your IBM instructors.
+2. On the Upload/Download tab, click the Upload button and upload [this actions.json file](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json) or the file that was given to you by your IBM instructors.
 3. Configure the "Invoke watsonx generation API" action
    1. On Step 1, click "Edit extension" to setup watsonx.ai custom extension.
       ![](../../assets/screenshots/watsonx_assistant_watsonxai_action.png)
    2. For the Extension options, select "watsonx.ai" and for the Operation options, select "Generation"
-   3. For "Parameters"
+   3. For "Parameters", configure the following to pass the these variables to the watsonx.ai custom extension properly.
       1. set **version** to `watsonx_api_version` variable
       2. set **input** to `model_input` variable
       3. set **model_id** to `model_id` variable
