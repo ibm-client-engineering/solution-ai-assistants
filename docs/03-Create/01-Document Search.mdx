@@ -60,14 +60,24 @@ In addition to direct upload data, in the Upload data section, select the _here_
 ## watsonx Assistant
 -----
 :::note
-* **Prerequisite Required:** Watsonx Assistant Instance
+* **Prerequisite Required:** watsonx Assistant Instance
 * **Prerequisite Required:** Watson Discovery Instance
 * **Prerequisite Required:** watsonx.ai Instance
 :::
 
+### Create watsonx Assistant
+If you do not have an watsonx Assistant, create new bot and fill in all required information. Please see **Details** section below.
+<details>
+   1. Fill in Assistant name (for example “IT Helpdesk”), and click “Next”.
+      - ![](../../assets/screenshots/watsonx-assistant-create-1.png)
+   1. You’d see the following view. Fill in the form and click “Next”.
+      - ![](../../assets/screenshots/watsonx-assistant-create-2.png)
+   1. Fill in a name for you assistant. For example, enter “IT Assistant”. Click “Next”
+      - ![](../../assets/screenshots/watsonx-assistant-create-3.png)
+   1. You’d see the following view. Click “Create” to complete creation of your watsonx Assistant.
+      - ![](../../assets/screenshots/watsonx-assistant-create-4.png)
+</details>
 ### Create Watson Discovery Custom Extension
-
-1. If you do not have an Watsonx Assistant, create new bot and fill in all required information.
 1. Once created, in your assistant, navigate to "Integrations" page.
 1. Click "Build custom extensions" -> click "Next" -> Input Extension name `Watson Discovery` -> click "Next"
 1. Download the Watson Discovery OpenAPI json file: [watson-discovery-query-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/watson-discovery/watson-discovery-query-openapi.json) and import file to WA. This file contains the configuration to enable accessing to watson discovery from watsonx assistant.
@@ -97,7 +107,7 @@ In addition to direct upload data, in the Upload data section, select the _here_
     ![](../../assets/screenshots/custom_extension_completed_view.png)
 
 ### Enable Document search
-To enable the document search capability, you'll need to configure Watsonx.ai and Watson Discovery to work with Watsonx Assistant through its actions.
+To enable the document search capability, you'll need to configure watsonx.ai and Watson Discovery to work with watsonx Assistant through its actions.
 
 ##### Upload Actions:
 1. On the Actions page of watsonx Assistant, click on Global Settings.
