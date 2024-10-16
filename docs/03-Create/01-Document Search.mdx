@@ -65,9 +65,19 @@ In addition to direct upload data, in the Upload data section, select the _here_
 * **Prerequisite Required:** watsonx.ai Instance
 :::
 
+### Create Watsonx Assistant
+If you do not have an Watsonx Assistant, create new bot and fill in all required information. Please see details section below.
+<details>
+   1. Fill in Assistant name (for example “IT Helpdesk”), and click “Next”.
+      - ![](../../assets/screenshots/watsonx-assistant-create-1.png)
+   1. You’d see the following view. Fill in the form and click “Next”.
+      - ![](../../assets/screenshots/watsonx-assistant-create-2.png)
+   1. Fill in a name for you assistant. For example, enter “IT Assistant”. Click “Next”
+      - ![](../../assets/screenshots/watsonx-assistant-create-3.png)
+   1. You’d see the following view. Click “Create” to complete creation of your watsonx Assistant.
+      - ![](../../assets/screenshots/watsonx-assistant-create-4.png)
+</details>
 ### Create Watson Discovery Custom Extension
-
-1. If you do not have an Watsonx Assistant, create new bot and fill in all required information.
 1. Once created, in your assistant, navigate to "Integrations" page.
 1. Click "Build custom extensions" -> click "Next" -> Input Extension name `Watson Discovery` -> click "Next"
 1. Download the Watson Discovery OpenAPI json file: [watson-discovery-query-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/watson-discovery/watson-discovery-query-openapi.json) and import file to WA. This file contains the configuration to enable accessing to watson discovery from watsonx assistant.
