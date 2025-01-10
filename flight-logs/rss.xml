@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>AI Assistants Blog</title>
+        <title>AI Assistants for Customer Care Blog</title>
         <link>https://ibm-client-engineering.github.io/solution-ai-assistants/flight-logs</link>
-        <description>AI Assistants Blog</description>
+        <description>AI Assistants for Customer Care Blog</description>
         <lastBuildDate>Fri, 01 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
